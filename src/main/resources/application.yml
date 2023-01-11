@@ -1,0 +1,24 @@
+server: 
+  port: 9191 
+
+eureka: 
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultzone: http://localhost:8761/eureka/ 
+  instance: 
+   hostname: localhost
+
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#      - id: AUTHOR-SERVICE
+#        uri: lb://AUTHOR-SERVICE
+#        predicates:
+#         -Path : /authors/** 
+#      - id: DOCUMENT-SERVICE
+#        uri: lb://DOCUMENT-SERVICE
+#        predicates: 
+#         - Path : /documents/** 
